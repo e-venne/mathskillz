@@ -1,163 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mathlessonz</title>
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #0d1117, #161b22);
-            background-size: 400% 400%;
-            animation: gradientAnimation 10s ease infinite;
-            color: #c9d1d9;
-            scroll-behavior: smooth;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Interactive browser-based math lessons for students.">
+  <title>MathLessonz</title>
 
-        @keyframes gradientAnimation {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #1f6feb, #0a84ff);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Navigation */
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #161b22;
-            padding: 1rem 0;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav a {
-            color: #58a6ff;
-            text-decoration: none;
-            margin: 0 1.5rem;
-            font-size: 1.2rem;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #1f6feb;
-        }
-
-        /* Main Content */
-        .top-games {
-            max-width: 1200px;
-            margin: 3rem auto;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        .top-games h2 {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            color: #58a6ff;
-        }
-
-        .games-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        .game {
-            background: #161b22;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-            text-align: center;
-            overflow: hidden;
-            width: 300px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .game:hover {
-            transform: translateY(-10px);
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
-        }
-
-        .game img {
-            width: 100%;
-            height: auto;
-        }
-
-        .game p {
-            padding: 1rem;
-            font-size: 1.2rem;
-            color: #c9d1d9;
-            font-weight: bold;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 1.5rem 0;
-            background: #161b22;
-            color: #c9d1d9;
-            margin-top: 3rem;
-            font-size: 1rem;
-        }
-
-        footer a {
-            color: #58a6ff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        Mathlessonz
-    </header>
-    <nav>
+  <div class="background"></div>
+
+  <header>
+    <div class="container">
+      <h1>MathLessonz</h1>
+      <nav>
         <a href="index.html">Home</a>
-        <a href="all-games.html">All Games</a>
-    </nav>
-    <div class="top-games" id="top-games">
-        <h2>Top Played Games</h2>
-        <div class="games-container">
-            <div class="game">
-                <img src="assets/game1.jpg" alt="Game 1">
-                <p>Learn Addition</p>
-            </div>
-            <div class="game">
-                <img src="assets/game2.jpg" alt="Game 2">
-                <p>Multiplication Mania</p>
-            </div>
-            <div class="game">
-                <img src="assets/game3.jpg" alt="Game 3">
-                <p>Fraction Frenzy</p>
-            </div>
-        </div>
+        <a href="lessons.html">All Lessons</a>
+      </nav>
     </div>
-    <footer>
-        &copy; 2025 Mathlessonz. All rights reserved. Developed by <a href="#">e-venne</a>.
-    </footer>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Top 3 Lessons of the Week</h2>
+      <div class="lessons-grid">
+        <div class="lesson-card">
+          <img src="images/snake.png" alt="Logic Snake">
+          <h3>Lesson 1: Logic Snake</h3>
+          <p>Sharpen your reflexes and logic skills.</p>
+          <a href="games/snake.html" class="btn">Start Lesson</a>
+        </div>
+
+        <div class="lesson-card">
+          <img src="images/2048.png" alt="Number Merge">
+          <h3>Lesson 2: Number Merge</h3>
+          <p>Work with powers of 2 in a puzzle format.</p>
+          <a href="games/2048.html" class="btn">Start Lesson</a>
+        </div>
+
+        <div class="lesson-card">
+          <img src="images/typing.png" alt="Typing Trainer">
+          <h3>Lesson 3: Typing Trainer</h3>
+          <p>Improve your WPM and reaction time.</p>
+          <a href="games/typing.html" class="btn">Start Lesson</a>
+        </div>
+      </div>
+
+      <a href="lessons.html" class="view-all-btn">View All Lessons</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MathLessonz. For educational use only.</p>
+  </footer>
 </body>
 </html>
